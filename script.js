@@ -1,5 +1,8 @@
 
 let singleCard = document.querySelectorAll(".singleCard")
+let back = document.querySelectorAll(".back")
+let front = document.querySelectorAll(".front")
+console.log(front)
 
 
 for(let i=0; i < singleCard.length; i++) {
@@ -8,16 +11,22 @@ for(let i=0; i < singleCard.length; i++) {
     });
 }
 
-let back = document.querySelectorAll(".back")
-
-for(let i = 0; i < back.length; i++) {
-    back[i].innerText = chooseText()
+for(let i = 0; i < front.length; i++) {
+for(let j = 0; j < back.length; j++) {
+    front[i].addEventListener("click", () => {
+        back[j].innerText = chooseText()
+    })
 }
+}
+
+
+
 
 
 function chooseText() {
     let random = Math.floor(Math.random() * 25)
     console.log(random, "random")
+    if(random === 0) return "full moon in scorpio"
     if(random === 1) return "they wake us from sweet hibernation"
     if(random === 2) return "it's okay to be a little sour"
     if(random === 3) return "patty pan, I never knew your name"
@@ -42,6 +51,6 @@ function chooseText() {
     if(random === 22) return "soon we will have enough wood to build a coop for pixelated chickens"
     if(random === 23) return "all nasty tidbits and breathless angst"
     if(random === 24) return "early retirement dreams"
-    if(random === 25) return "full moon in scorpio"
+    // if(random === 25) return "full moon in scorpio"
 
 }
