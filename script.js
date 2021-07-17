@@ -2,7 +2,7 @@
 let singleCard = document.querySelectorAll(".singleCard")
 let back = document.querySelectorAll(".back")
 let front = document.querySelectorAll(".front")
-console.log(front)
+
 
 
 for(let i=0; i < singleCard.length; i++) {
